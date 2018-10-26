@@ -1,0 +1,33 @@
+#!/bin/bash
+# Container functions
+qute(){
+	sudo systemd-nspawn \
+		        --setenv=DISPLAY=:0 \
+			--setenv=XAUTHORITY=~/.Xauthority \
+			--bind-ro=$HOME/.Xauthority:/root/.Xauthority \
+			--bind=/tmp/.X11-unix \
+			-D /var/lib/machines/qute \
+			qutebrowser
+
+}
+fire(){
+	sudo systemd-nspawn \
+		        --setenv=DISPLAY=:0 \
+			--setenv=XAUTHORITY=~/.Xauthority \
+			--bind-ro=$HOME/.Xauthority:/root/.Xauthority \
+			--bind=/tmp/.X11-unix \
+			-UD ~/container/firefox \
+			firefox
+
+}
+
+signal(){
+	sudo systemd-nspawn \
+         	        --setenv=DISPLAY=:0 \
+			--setenv=XAUTHORITY=~/.Xauthority \
+			--bind-ro=$HOME/.Xauthority:/root/.Xauthority \
+			--bind=/tmp/.X11-unix \
+			-UD /var/lib/machines/signal \
+			signal-desktop
+
+}
