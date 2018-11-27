@@ -70,6 +70,10 @@ nnoremap <C-o> :rightbelow split term://bash<CR>
 nnoremap <C-j> :rightbelow sbn<CR>
 nnoremap <tab> :bn<CR>
 
+"Search hl off
+nnoremap <leader>/ :noh<CR>
+"V-block cgn 
+nnoremap <leader>v <C-V>
 "Tabular
 nnoremap <leader>= :Tabularize /=<CR>
 nnoremap <leader>- :Tabularize /-><CR>
