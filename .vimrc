@@ -3,7 +3,7 @@ Plug 'godlygeek/Tabular'
 Plug 'itchyny/lightline.vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'bling/vim-bufferline'
-Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 Plug 'dracula/vim',{'as':'dracula'}
 call plug#end()
 
@@ -70,6 +70,27 @@ nnoremap <C-o> :rightbelow split term://bash<CR>
 nnoremap <C-j> :rightbelow sbn<CR>
 nnoremap <tab> :bn<CR>
 
+"vim-surround
+vmap <leader>] S]
+vmap <leader>) S)
+vmap <leader>" S"
+vmap <leader>' S'
+vmap <leader>} S}
+nmap <leader>] ysiw]
+nmap <leader>) ysiw)
+nmap <leader>" ysiw"
+nmap <leader>' ysiw'
+nmap <leader>} ysiw}
+
+"netrw nerdtree style
+let g:netrw_liststyle = 3
+"netrw rm banner
+let g:netrw_banner = 0
+"netrw size
+let g:netrw_winsize = 25
+let g:netrw_altv = 1
+let g:netrw_browse_split = 4
+nnoremap <leader>p :Vexplore<CR>
 "Search hl off
 nnoremap <leader>/ :noh<CR>
 "V-block cgn 
